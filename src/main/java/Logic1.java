@@ -210,7 +210,7 @@ public class Logic1
       if (outsideMode == false && n>= 1 && n<= 10){
           o=true;
       }
-      else if (outsideMode == true && n<=1 && n>= 10){
+      else if (outsideMode == true && (n<=1 || n>= 10)){
           o = true;
       }
       return o;
@@ -322,13 +322,13 @@ public class Logic1
       if (vacation == false && day >=1 && day <=5){
           o = "7:00";
       }
-      if (vacation == false && day <=1 || vacation == false && day >=5){
+      if ((vacation == false && day <=1) || (vacation == false && day >=5)){
           o = "10:00";
       }
       if (vacation == true && day >=1 && day <=5){
           o = "10:00";
       }
-      if (vacation == true && day <=1 || vacation == true && day >=5){
+      if ((vacation == true && day <=1) || (vacation == true && day >=5)){
           o = "off";
       }
       return o;
